@@ -47,26 +47,26 @@ switch (caseInput) {
             function (response) {
                 // console.log(response.data);
                 var concerts = response.data; //reference to the array we are pulling the data from
+                
                 for (var i = 0; i < concerts.length; i++) {
-                    var currentElement = concerts[i]; // LOOPING THROUGH ARRAYS   
 
-                    console.log("\n" + "* * * " + currentElement.lineup + " * * *");
-                    console.log("\n" + "Venue: " + currentElement.venue.name);
-                    console.log("City: " + currentElement.venue.city + ", " + (currentElement.venue.region || currentElement.venue.country));
-                    console.log("Date: " + moment(currentElement.datetime).format('MM/DD/YYYY')); // MM/DD/YYYY format using MomentJS
+                    var concertObj = concerts[i]; // LOOPING THROUGH ARRAYS   
+
+                    console.log("\n" + "* * * " + concertObj.lineup + " * * *");
+                    console.log("\n" + "Venue: " + concertObj.venue.name);
+                    console.log("City: " + concertObj.venue.city + ", " + (concertObj.venue.region || concertObj.venue.country));
+                    console.log("Date: " + moment(concertObj.datetime).format('MM/DD/YYYY')); // MM/DD/YYYY format using MomentJS
                     console.log("\n" + "-------------------------------------------------");
                 };
             });
         break;
 
-        // SPOTIFY THIS SONG
+    // SPOTIFY THIS SONG
 
     case "spotify-this-song":
         // console.log("You hit spotify.");
-      
-        if (nameInput === "") {
-
-            nameInput = "Thong Song";
+        if (nameInput == null) {
+            nameInput = "Thong Song"
         } {
             spotify.search({
                     type: 'track',
@@ -99,9 +99,9 @@ switch (caseInput) {
 //     });
 
 //     for (var i = 0; i < spotifySong.length; i++) {
-//         var currentElement = spotifySong[i];
+//         var concertObj = spotifySong[i];
 //         console.log("\n"
-//             "* * * " + currentElement)
+//             "* * * " + concertObj)
 //     }
 // }
 
