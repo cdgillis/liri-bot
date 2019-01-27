@@ -45,13 +45,13 @@ switch (caseInput) {
         console.log("You hit concert-this.");
         axios.get("https://rest.bandsintown.com/artists/" + nameInput + "/events?app_id=codingbootcamp").then(
             function (response) {
-                // console.log(response.data);
+                // SIMPLIFY RESULTS
                 var concerts = response.data; //reference to the array we are pulling the data from
-                
+                // FOR LOOP
                 for (var i = 0; i < concerts.length; i++) {
-
+                    // FURTHER SIMPLIFY RESULTS
                     var concertObj = concerts[i]; // LOOPING THROUGH ARRAYS   
-
+                    // PRINT RESULTS
                     console.log("\n" + "* * * " + concertObj.lineup + " * * *");
                     console.log("\n" + "Venue: " + concertObj.venue.name);
                     console.log("City: " + concertObj.venue.city + ", " + (concertObj.venue.region || concertObj.venue.country));
@@ -61,21 +61,22 @@ switch (caseInput) {
             });
         break;
 
-    // SPOTIFY THIS SONG
+        // SPOTIFY THIS SONG
 
     case "spotify-this-song":
         // console.log("You hit spotify.");
+        // ASSIGN DEFAULT SONG
         if (nameInput == null) {
             nameInput = "Thong Song"
-        } {
+        } { // SEARCH SPOTIFY 
             spotify.search({
                     type: 'track',
                     query: nameInput
-                })
+                }) // GET THE DATA 
                 .then(function (response) {
-
+                    // SIMPLIFY RESULTS
                     var spotifyObj = response.tracks.items[0];
-                
+                    // PRINT RESULTS
                     console.log("\n\nSPOTIFY RESULTS");
                     console.log("---------------------------------\n");
                     console.log("Track Name: \n'" + spotifyObj.name + "' by " + spotifyObj.artists[0].name);
@@ -84,36 +85,56 @@ switch (caseInput) {
                     console.log("\n---------------------------------\n");
                 })
         }
-};
+        break;
 
-// FIRST ATTEMPT AT SPOTIFY
+        // MOVIE THIS
 
-//     spotify.search({
-//         type: 'track',
-//         query: 'All the Small Things'
-//     }, function (err, data) {
-//         if (err) {
-//             return console.log('Error occurred: ' + err);
-//         }
-//         console.log(data);
-//     });
+    case "movie-this":
+        // console.log("You hit movie-this.");
+        // ASSIGN DEFAULT MOVIE
+        if (nameInput == null) {
+            nameInput = "Twins"
+        } { // GET THE DATA 
+            axios.get("https://www.omdbapi.com/?t=" + nameInput + "&y=&plot=short&apikey=6bf18958")
+                .then(function (response) {
+                    // SIMPLIFY RESULTS
+                    var movieObj = response.data;
+                    // PRINT RESULTS
+                    console.log("\n\nMOVIE STATS");
+                    console.log("---------------------------------------------------------------------\n");
+                    console.log("* * * " + movieObj.Title + " * * *\n");
+                    console.log("Year of Release: " + movieObj.Year);
+                    console.log("IMDB Rating:     " + movieObj.imdbRating);
+                    console.log("Rotten Tomatoes: " + movieObj.Ratings[1].Value);
+                    console.log("Produced in:     " + movieObj.Country);
+                    console.log("Language:        " + movieObj.Language);
+                    console.log("Starring:        " + movieObj.Actors);
+                    console.log("Plot Summary:    " + movieObj.Plot);
+                    console.log("\n---------------------------------------------------------------------\n");
+                })
+                // HANDLE ERRORS
+                .catch(function (error) {
+                    if (error.response) {
+                        console.log(error.movieObj);
+                        console.log(error.response.status);
+                        console.log(error.response.headers);
+                    } else if (error.request) {
+                        console.log(error.request);
+                    } else {
+                        console.log("Error", error.message);
+                    }
+                })
+        }
+        break;
+        // DO WHAT IT SAYS
 
-//     for (var i = 0; i < spotifySong.length; i++) {
-//         var concertObj = spotifySong[i];
-//         console.log("\n"
-//             "* * * " + concertObj)
-//     }
-// }
+        // case "do-what-it-says":
+        // console.log("You hit do-what-it-says.");
+        // break;
+}
 
 
-// break;
-// case "movie-this":
-// console.log("You hit movie-this.");
-// break;
-// case "do-what-it-says":
-// console.log("You hit do-what-it-says.");
-// break;
+
 // default:
 // console.log("Please enter a valid command. Thank you.");
 // break;
-// }
