@@ -1,50 +1,31 @@
-// Loading Modules
+// LOADING MODULES
+
 require("dotenv").config();
 
+var fs = require("fs");
 var keys = require("./keys");
 var axios = require("axios");
 var moment = require('moment');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
 
-var caseInput = process.argv[2]; // formerly userCommand
+// ARGUMENTS
+
+var caseInput = process.argv[2];
 var nameInput = process.argv[3];
-// console.log(nameInput);
 
-// function command(arg) {
-
-//     switch (arg) {
-//         case 'concert-this':
-//             {
-//                 bands(nameInput);
-//                 break;
-//             }
-//         case 'spotify-this-song':
-//             {
-//                 spotifyThis(nameInput);
-//                 break;
-//             }
-//         case 'movie-this':
-//             console.log("You hit movie-this."); {
-//                 if (!nameInput) nameInput = "Mr. Nobody";
-//                 omdb(nameInput);
-//                 break;
-//             }
-//         case 'do-what-it-says':
-//             console.log("You hit do-what-it-says."); {
-//                 doWhatItSays();
-//             }
-//     }
-// }
+// RUN SWITCH FUNCTION
 
 switch (caseInput) {
 
     // CONCERT THIS
 
     case "concert-this":
-        console.log("You hit concert-this.");
-        axios.get("https://rest.bandsintown.com/artists/" + nameInput + "/events?app_id=codingbootcamp").then(
-            function (response) {
+        // console.log("You hit concert-this.");
+        // GET THE DATA
+
+        axios.get("https://rest.bandsintown.com/artists/" + nameInput + "/events?app_id=codingbootcamp")
+            .then(function (response) {
                 // SIMPLIFY RESULTS
                 var concerts = response.data; //reference to the array we are pulling the data from
                 // FOR LOOP
@@ -126,11 +107,42 @@ switch (caseInput) {
                 })
         }
         break;
+
         // DO WHAT IT SAYS
 
-        // case "do-what-it-says":
-        // console.log("You hit do-what-it-says.");
-        // break;
+    // case "do-what-it-says":
+    //     console.log("You hit do-what-it-says.");
+    //     // GET THE DATA
+    //     fs.readFile("random.txt", "utf8", function (error, data) {
+    //         // HANDLE ERRORS
+    //         if (error) {
+    //             return console.log(error);
+    //         } else { // RUN THE APPROPRIATE FUNCTION
+
+    //             switch (caseInput) {
+    //                 case "concert-this":
+    //                     if nameInput
+    //                     break;
+
+    //                 default:
+    //                     break;
+    //             }
+
+    //             spotify.search({
+    //                     type: 'track',
+    //                     query: data
+    //                 })
+    //                 .then(function (response) {
+    //                     // SIMPLIFY RESULTS
+    //                     var taskObj = response.tracks.items[0];
+    //                     console.log(JSON.stringify(taskObj.artists[0].name));
+    //                     console.log(data);
+    //                     console.log(JSON.stringify(taskObj.album.uri));
+    //                     console.log(JSON.stringify(taskObj.album.name));
+    //                 })
+    //         }
+    //     })
+    //     break;
 }
 
 
