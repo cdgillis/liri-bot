@@ -19,7 +19,7 @@ var nameInput = process.argv[3];
 function errorFunction(error) {
     if (error) {
         return console.log("Error occured: ", error);
-    }
+    };
 };
 
 // SWITCH FUNCTION
@@ -56,16 +56,14 @@ switch (caseInput) {
                 case "movie-this":
                     movieThis();
                     break;
-
-            }
+            };
         });
         break;
 
     default:
         console.log("\nSorry, '" + caseInput + "' is not a command recognized by Liri. Please try one of the following: \n\n  1. To perform a random search, type: node liri.js do-what-it-says \n  2. To search for movie statistics, type: node liri.js movie-this <with a movie title following> \n  3. To search a song on Spotify, type: node liri.js spotify-this <specify song title>\n");
         break;
-
-}
+};
 
 // FUNCTIONS
 
@@ -86,7 +84,7 @@ function concertThis() {
                     console.log("City: " + concertObj.venue.city + ", " + (concertObj.venue.region || concertObj.venue.country)),
                     console.log("Date: " + moment(concertObj.datetime).format('MM/DD/YYYY')), // MM/DD/YYYY format using MomentJS
                     console.log("\n-------------------------------------------------")
-            }
+            };
         })
         .catch(function (error) {
             if (error.response) {
@@ -97,9 +95,9 @@ function concertThis() {
                 console.log(error.request);
             } else {
                 console.log("Error", error.message);
-            }
-        })
-}
+            };
+        });
+};
 
 
 function spotifyThis() {
@@ -163,4 +161,4 @@ function movieThis() {
             });
 
     };
-}
+};
