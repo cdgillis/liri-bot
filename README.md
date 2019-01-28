@@ -1,4 +1,4 @@
-# LIRI-BOT
+# LIRI-Bot
 
 ### Overview:
 
@@ -16,7 +16,7 @@ LIRI uses the following commands:
 * Node.js
 * JavaScript
 
-### npm packages:
+### npm packages used:
 
 * [spotify](https://www.npmjs.com/package/node-spotify-api) - A simple to use API library for the Spotify API.
 * [axios](https://www.npmjs.com/package/axios) - is a Promise-based HTTP client for the browser and node.js, which was used to grab data from [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
@@ -24,22 +24,22 @@ LIRI uses the following commands:
 * [Moment.js](https://www.npmjs.com/package/moment) - a free and open source JavaScript library that removes the need to use the native JavaScript Date object directly. The library is a wrapper for the Date object (in the same way that jQuery is a wrapper for JavaScript) making the object a whole lot easier to work with.
 
 
-## How to Run LIRI-Bot
+## How to Run LIRI-Bot:
 
-In your terminal/bash window, navigate to the folder called 'liri-bot'.
+In your terminal/bash window, navigate to the folder 'liri-bot' and type one of the four commands as per the instructions below. The results will be returned in the same terminal/bash window.
 
-#### Step One: 
+##### Command One: 
 
-#### node liri.js concert-this <artist name here>
+#### node liri.js concert-this < artist name here >
 
 Returns a list of the upcoming shows, including the full lineup, venue name, city, and date
 
 ![concert-this-1](/images/ConcertThis1.png)
 ![concert-this-2](/images/ConcertThis2.png)
 
-#### Step Two: 
+##### Command Two: 
 
-#### node liri.js spotify-this <song name here>
+#### node liri.js spotify-this < song name here >
 
 Returns the following information about the song:
 
@@ -54,20 +54,20 @@ If no song name is provided, the program will default to "Thong Song" by Sisqo:
 
 ![spotify-this-2](/images/Spotify3-defaultSong.png)
 
-#### Step Three: 
+##### Command Three: 
 
-#### node liri.js movie-this <movie name here>
+#### node liri.js movie-this < movie name here >
 
-This will output the following information to your terminal/bash window:
+Returns the following information about the movie:
 
-* Title of the movie
-* Year movie was released
-* IMDB Rating
-* Rotten Tomatoes Rating
-* Country where movie produced
+* Title
+* Year of release
+* IMDB rating
+* Rotten Tomatoes rating
+* Country where produced
 * Language
 * Actors starring in the movie
-* Plot Summary
+* Plot summary
 
 ![movie-this-1](/images/MovieThis2.png)
 
@@ -75,17 +75,21 @@ If no movie name is provided, the program will default to the movie 'Twins'.
 
 ![movie-this-2](/images/MovieThis1-defaultMovie.png)
 
-#### Step Four: 
+##### Command Four: 
 
 #### node liri.js do-what-it-says
 
-This will output the command placed in random.txt file. For example:
+Runs appropriate command based on the information in "random.txt" file. 
+
+For example:
 
 ![do-what-it-says-1](/images/DoWhatItSays-Movie.png)
 ![do-what-it-says-2](/images/DoWhatItSays-Spotify.png)
 ![do-what-it-says-3](/images/DoWhatItSays-Concert.png)
 
-Thanks for reading. Enjoy Liri!
+
+
+Thanks for reading. Enjoy LIRI!
 
 -*cdgillis*
 
