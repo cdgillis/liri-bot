@@ -19,9 +19,9 @@ LIRI uses the following commands:
 ### npm packages:
 
 * [spotify](https://www.npmjs.com/package/node-spotify-api) - A simple to use API library for the Spotify API.
-* [axios](https://www.npmjs.com/package/axios) - used to grab data from [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
-* [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
-* [Moment](https://www.npmjs.com/package/moment)
+* [axios](https://www.npmjs.com/package/axios) - is a Promise-based HTTP client for the browser and node.js, which was used to grab data from [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
+* [dotenv](https://www.npmjs.com/package/dotenv) - a zero-dependency module that loads environment variables from a .env file into process.env.
+* [Moment.js](https://www.npmjs.com/package/moment) - a free and open source JavaScript library that removes the need to use the native JavaScript Date object directly. The library is a wrapper for the Date object (in the same way that jQuery is a wrapper for JavaScript) making the object a whole lot easier to work with.
 
 
 ## How to Run LIRI-Bot
@@ -33,6 +33,8 @@ In your terminal/bash window, navigate to the folder called 'liri-bot'.
 #### node liri.js concert-this <artist name here>
 
 Returns a list of the upcoming shows, including the full lineup, venue name, city, and date
+
+![concert-this-1](/images/ConcertThis1.png)
 
 #### Step Two: 
 
