@@ -28,18 +28,18 @@ LIRI uses the following commands:
 
 In your terminal/bash window, navigate to the folder 'liri-bot' and type one of the four commands as per the instructions below. The results will be returned in the same terminal/bash window.
 
-##### Command One: 
+#### Command One: 
 
-#### node liri.js concert-this < artist name here >
+### node liri.js concert-this < artist name here >
 
 Returns a list of the upcoming shows, including the full lineup, venue name, city, and date
 
 ![concert-this-1](/images/ConcertThis1.png)
 ![concert-this-2](/images/ConcertThis2.png)
 
-##### Command Two: 
+#### Command Two: 
 
-#### node liri.js spotify-this < song name here >
+### node liri.js spotify-this < song name here >
 
 Returns the following information about the song:
 
@@ -54,9 +54,9 @@ If no song name is provided, the program will default to "Thong Song" by Sisqo:
 
 ![spotify-this-2](/images/Spotify3-defaultSong.png)
 
-##### Command Three: 
+#### Command Three: 
 
-#### node liri.js movie-this < movie name here >
+### node liri.js movie-this < movie name here >
 
 Returns the following information about the movie:
 
@@ -75,9 +75,9 @@ If no movie name is provided, the program will default to the movie 'Twins'.
 
 ![movie-this-2](/images/MovieThis1-defaultMovie.png)
 
-##### Command Four: 
+#### Command Four: 
 
-#### node liri.js do-what-it-says
+### node liri.js do-what-it-says
 
 Runs appropriate command based on the information in "random.txt" file. 
 
