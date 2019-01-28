@@ -6,10 +6,10 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 LIRI uses the following commands:
 
-> concert-this
-> spotify-this
-> movie-this
-> do-what-it-says
+* **concert-this**
+* **spotify-this**
+* **movie-this**
+* **do-what-it-says**
 
 ### Technologies used:
 
@@ -18,10 +18,10 @@ LIRI uses the following commands:
 
 ### npm packages:
 
-[spotify](https://www.npmjs.com/package/node-spotify-api) - A simple to use API library for the Spotify API.
-[axios](https://www.npmjs.com/package/axios) - used to grab data from [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
-[dotenv](https://www.npmjs.com/package/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
-[Moment](https://www.npmjs.com/package/moment)
+* [spotify](https://www.npmjs.com/package/node-spotify-api) - A simple to use API library for the Spotify API.
+* [axios](https://www.npmjs.com/package/axios) - used to grab data from [OMDB API](http://www.omdbapi.com) and the [Bands In Town API](http://www.artists.bandsintown.com/bandsintown-api)
+* [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
+* [Moment](https://www.npmjs.com/package/moment)
 
 
 ## How to Run LIRI-Bot
