@@ -35,6 +35,7 @@ In your terminal/bash window, navigate to the folder called 'liri-bot'.
 Returns a list of the upcoming shows, including the full lineup, venue name, city, and date
 
 ![concert-this-1](/images/ConcertThis1.png)
+![concert-this-2](/images/ConcertThis2.png)
 
 #### Step Two: 
 
@@ -47,7 +48,11 @@ Returns the following information about the song:
 * Link to the song on Spotify
 * Album
 
-If no song name is provided, the program will default to "Thong Song" by Sisqo
+![spotify-this-1](/images/Spotify1.png)
+
+If no song name is provided, the program will default to "Thong Song" by Sisqo:
+
+![spotify-this-2](/images/Spotify3-defaultSong.png)
 
 #### Step Three: 
 
@@ -64,10 +69,23 @@ This will output the following information to your terminal/bash window:
 * Actors starring in the movie
 * Plot Summary
 
+![movie-this-1](/images/MovieThis2.png)
+
 If no movie name is provided, the program will default to the movie 'Twins'.
+
+![movie-this-2](/images/MovieThis1-defaultMovie.png)
 
 #### Step Four: 
 
 #### node liri.js do-what-it-says
 
-This will output the command placed in random.txt file
+This will output the command placed in random.txt file. For example:
+
+![do-what-it-says-1](/images/DoWhatItSays-Movie.png)
+![do-what-it-says-2](/images/DoWhatItSays-Spotify.png)
+![do-what-it-says-3](/images/DoWhatItSays-Concert.png)
+
+Thanks for reading. Enjoy Liri!
+
+-*cdgillis*
+
